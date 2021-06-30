@@ -1,7 +1,5 @@
 package lc
 
-import "fmt"
-
 func reverse7(x int) int {
 	tmp := 0
 	for x != 0 {
@@ -14,6 +12,6 @@ func reverse7(x int) int {
 	return tmp
 }
 
-func Test() {
-	fmt.Print(reverse7(123))
-}
+// func Test() {
+// 	fmt.Print(reverse7(123))
+// }
