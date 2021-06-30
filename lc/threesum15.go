@@ -1,7 +1,6 @@
 package lc
 
 import (
-	"fmt"
 	"sort"
 )
 
@@ -65,9 +64,9 @@ func threeSum(nums []int) [][]int {
 	return res
 }
 
-func Test() {
-	arr := []int{-1, 0, 1, 2, -1, -4}
-	qsort(arr, 0, len(arr)-1)
-	fmt.Println(arr)
+// func Test() {
+// 	arr := []int{-1, 0, 1, 2, -1, -4}
+// 	qsort(arr, 0, len(arr)-1)
+// 	fmt.Println(arr)
 
-}
+// }
