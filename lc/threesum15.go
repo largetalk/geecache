@@ -20,6 +20,30 @@ func search(arr []int, n int, idx int) int {
 	return -1
 }
 
+func qsort(arr []int, left int, right int) {
+	if left >= right {
+		return
+	}
+	i := left + 1
+	j := right
+	sentry := arr[left]
+	for i < j {
+		for arr[i] <= sentry && i < j {
+			i++
+		}
+		for arr[j] > sentry && i < j {
+			j--
+		}
+		arr[i], arr[j] = arr[j], arr[i]
+	}
+	if arr[i] > sentry {
+		i--
+	}
+	arr[i], arr[left] = sentry, arr[i]
+	qsort(arr, left, i-1)
+	qsort(arr, i+1, right)
+}
+
 func threeSum(nums []int) [][]int {
 	res := [][]int{}
 	sort.Ints(nums)
@@ -43,6 +67,7 @@ func threeSum(nums []int) [][]int {
 
 func Test() {
 	arr := []int{-1, 0, 1, 2, -1, -4}
-	fmt.Println(threeSum(arr))
+	qsort(arr, 0, len(arr)-1)
+	fmt.Println(arr)
 
 }
