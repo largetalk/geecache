@@ -14,8 +14,10 @@ require (
 	go.uber.org/zap v1.17.0 // indirect
 	google.golang.org/grpc v1.38.0 // indirect
 	wzq.com/geecache v0.0.0
+	wzq.com/lc v0.0.0
 )
 
 replace wzq.com/geecache => ./geecache
+replace wzq.com/lc => ./lc
 
 replace google.golang.org/grpc => google.golang.org/grpc v1.26.0
