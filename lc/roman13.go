@@ -1,7 +1,5 @@
 package lc
 
-import "fmt"
-
 var roman = map[string]int{
 	"I": 1,
 	"V": 5,
@@ -30,6 +28,6 @@ func romanToInt(s string) int {
 	return total
 }
 
-func Test() {
-	fmt.Print(romanToInt("MCMLV"))
-}
+// func Test() {
+// 	fmt.Print(romanToInt("MCMLV"))
+// }
